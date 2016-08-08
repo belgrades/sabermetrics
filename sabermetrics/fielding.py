@@ -8,8 +8,12 @@
 
 
 def fpct(a, po, e):
-    """How often does a fielder or team make the play when tasked with fielding a batted ball, throwing a ball,
+    r"""How often does a fielder or team make the play when tasked with fielding a batted ball, throwing a ball,
      or receiving a thrown ball for an out.
+
+    .. math::
+        FPCT = \frac{PO + A}{PO + A + E}
+
     :param a: Assists.
     :type a: int.
     :param po: Putouts.
