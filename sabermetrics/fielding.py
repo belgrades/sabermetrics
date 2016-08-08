@@ -21,7 +21,7 @@ def fpct(a, po, e):
     """
 
     try:
-        return (po + a) *1.0 / (po + a + e)
+        return (po + a) * 1.0 / (po + a + e)
     except ZeroDivisionError:
         print("Total chances must be greater than 0.")
         import sys
