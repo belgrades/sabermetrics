@@ -1,5 +1,5 @@
 __author__ = "Fernando Crema"
-__copyright__ = "Copyright 2007, The Cogent Project"
+__copyright__ = "Copyright 2019, The Sabermetrics Python Package Project."
 __credits__ = ["Fernando Crema @FernandoCremaG", "Antonio Jesús Torres @ajtorresd"]
 __license__ = "GPL"
 __version__ = "1.0"
