@@ -52,20 +52,15 @@ if __name__ == "__main__":
 
     # Case A: Current Slump
     
-    p_hr_slump = 4*1.0/(68)
+    p_hr_slump = 1.0/(17)
     p_h_slump = 0.295
 
     prob_fail, at_bats = simulation(H, AB, p_h_slump, p_hr_slump, 10, .310)
 
     print("Case A: Current slump 2018-2019")
-    print("\t Average: {avg} \n\t HR Rate: {hr_rate} ".format(avg=p_h_slump, hr_rate=p_hr_slump))
-    print("\t Probability of failing (current performance): {prob}".format(
-            prob=prob_fail
-          )
-    )
-
-    print("\t Average at bats to achieve goal assuming current performance: {avg}".format(
-        avg=sum(at_bats)/len(at_bats)))
+    print("\t Average: {0:.3f} \n\t HR Rate1Hit: {1:.4f} ".format(p_h_slump, p_hr_slump))
+    print("\t Probability of failing (current performance): {0:.4f}".format(prob_fail))
+    print("\t Average at bats to achieve goal assuming current performance: {0:.3f}".format(sum(at_bats)/len(at_bats)))
 
     # Case B: Career
     
@@ -75,30 +70,20 @@ if __name__ == "__main__":
     prob_fail, at_bats = simulation(H, AB, p_h_career, p_hr_career, 10, .310)
 
     print("Case B: Career 2003-2019")
-    print("\t Average: {avg} \n\t HR Rate: {hr_rate} ".format(avg=p_h_career, hr_rate=p_hr_career))
-    print("\t Probability of failing (career): {prob}".format(
-            prob=prob_fail
-          )
-    )
-
-    print("\t Average at bats to achieve goal assuming career performance: {avg}".format(
-        avg=sum(at_bats)/len(at_bats)))
+    print("\t Average: {0:.3f} \n\t HR rate|Hit: {1:.4f} ".format(p_h_career, p_hr_career))
+    print("\t Probability of failing (career): {0:.4f}".format(prob_fail))
+    print("\t Average at bats to achieve goal assuming career performance: {0:.3f}".format(sum(at_bats)/len(at_bats)))
 
     # Case C: Hard Slump
     
-    p_hr_hard = 1.0/70.0
+    p_hr_hard = 1.0/25.0
     p_h_hard =  0.250
 
     prob_fail, at_bats = simulation(H, AB, p_h_hard, p_hr_hard, 10, .310)
 
-    print("Case B: Hard slump")
-    print("\t Average: {avg} \n\t HR Rate: {hr_rate} ".format(avg=p_h_hard, hr_rate=p_hr_hard))
-    print("\t Probability of failing (Hard slump): {prob}".format(
-            prob=prob_fail
-          )
-    )
-
-    print("\t Average at bats to achieve goal assuming hard slump: {avg}".format(
-        avg=sum(at_bats)/len(at_bats)))
+    print("Case C: Hard slump")
+    print("\t Average: {0:.3f} \n\t HR Rate|Hit: {1:.4f} ".format(p_h_hard,p_hr_hard))
+    print("\t Probability of failing (Hard slump): {0:.4f}".format(prob_fail))
+    print("\t Average at bats to achieve goal assuming hard slump: {0:.3f}".format(sum(at_bats)/len(at_bats)))
     
 
